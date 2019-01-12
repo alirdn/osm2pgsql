@@ -70,6 +70,7 @@ matrix:
 
   # ---- OSX + CLANG ---------------------------
     - os: osx
+      osx_image: xcode10.1
       compiler: clang
       env: T="osx_clang_NoDB" LUAJIT_OPTION="OFF" TEST_NODB=1
            CXXFLAGS="-pedantic -Werror"
