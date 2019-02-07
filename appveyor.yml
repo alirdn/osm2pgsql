@@ -74,8 +74,8 @@ before_build:
   - nmake
   - ps: |
      nuget install bzip2 -Version 1.0.6.11
-  - set BZIP2_LIB_PATH=C:\bzip2_dev\libbz2.lib
-  - set BZIP2_INCLUDE_DIR=C:\bzip2_dev
+  - set BZIP2_LIB_PATH=C:\wingetopt\build\bzip2.1.0.6.11\build\native\lib\v110\x64\Release\dynamic\cdecl\libbz2.lib
+  - set BZIP2_INCLUDE_DIR=C:\wingetopt\build\bzip2.1.0.6.11\build\native\include
 
 build_script:
   - mkdir c:\osm2pgsql\build
@@ -98,7 +98,7 @@ after_build:
   - copy /y %conda_library_path%\bin\ssleay32.dll osm2pgsql-bin
   - copy /y %conda_library_path%\bin\zlib.dll osm2pgsql-bin
   - copy /y %conda_library_path%\bin\expat.dll osm2pgsql-bin
-  - copy /y C:\bzip2\libbz2.dll osm2pgsql-bin
+  - copy /y C:\wingetopt\build\bzip2.redist.1.0.6.11\build\native\bin\v110\x64\Release\dynamic\cdecl\libbz2.dll osm2pgsql-bin
   - copy /y %LUA_DLL% osm2pgsql-bin
   - 7z a c:\osm2pgsql\osm2pgsql_%build_type%_%arch%.zip osm2pgsql-bin -tzip
 
