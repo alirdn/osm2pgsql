@@ -74,7 +74,7 @@ before_build:
   - nmake
   - ps: |
      nuget install bzip2 -Version 1.0.6.11
-  - set BZIP2_LIB_PATH=C:\bzip2_dev
+  - set BZIP2_LIB_PATH=C:\bzip2_dev\libbz2.lib
   - set BZIP2_INCLUDE_DIR=C:\bzip2_dev
 
 build_script:
