@@ -110,7 +110,7 @@ test_script:
   #- ctest -VV -L NoDB
   - ctest -VV -LE FlatNodes # enable when Postgis will be available
   
-  on_finish:
+on_finish:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 artifacts:
